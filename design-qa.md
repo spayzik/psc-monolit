@@ -28,3 +28,13 @@ Company contacts and document links are taken from the existing company site. Do
 The GitHub Actions workflow builds at `/psc-monolit/`, tests, and deploys only `site/dist/client` to Pages. Publication status is verified separately against the hosted site and Actions run; local QA alone is not deployment proof.
 
 Hosted verification: https://spayzik.github.io/psc-monolit/ at 1280px viewport (1265px content). All 24 rendered images loaded, no horizontal overflow, contact modal opened/closed, contacts navigation and return-to-top worked, and captured console warning/error list was empty. Source 5be24f084e392fa48f61caf62b458c2a2450c4de; successful workflow: https://github.com/spayzik/psc-monolit/actions/runs/40669662122 . Hosted screenshot saved locally as qa/hosted-hero.jpg.
+
+## Premium refinement QA — 2026-10-28
+
+Supersedes the initial mock comparison for visual presentation; content/interaction contracts remain. Inspected public 21st catalog plus two rendered previews; CLI was unauthenticated and further previews reached a sign-in gate. No catalog component source installed. Inspected David Chipperfield and Kokonut homepages; exact links, observations and rejected effects are in DESIGN.md.
+
+Rendered and inspected the new white editorial hero, split company block, numbered services, asymmetrical projects and contact section. Desktop 1440×1000, tablet 768×1024, phone 390×844 and narrow phone 320×740; no horizontal overflow in final observations. Evidence in ignored `qa/premium/` includes desktop full-page, mobile hero/About and tablet About screenshots. Desktop full document 1425×4899 after all reveal sections were visited.
+
+Repaired observed mobile overflow: hiding a heading line break had joined adjacent words; explicit whitespace now allows wrapping. Increased the mobile hero to three intentional lines. Rechecked 390px and 320px after the repair.
+
+Primary flow retested: service details → contact dialog → empty required fields rejected → synthetic valid contact creates encoded mail draft with selected service. No email sent. Mobile menu → documents → Shift+Tab wraps to last control → Tab wraps to close → Escape restores menu-button focus and body scrolling. Section anchors and return-to-top tested. Browser captured warning/error list empty; no broken loaded images. Production Pages-base build and all 8 existing tests passed after final source changes. Reduced-motion CSS retained and source-inspected; OS preference not changed during runtime QA.

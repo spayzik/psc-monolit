@@ -26,3 +26,24 @@ Desktop split about text/photo and split services; tablet retains readable colum
 
 ## Scope and acceptance
 React/Vite static client using bundled Product Design starter, no runtime backend. Small self-contained site/ folder; root workflow publishes site/dist/client. No change to psc-monolit.ru domain or DNS. Verify build, unit tests, actual browser at desktop/tablet/mobile, primary interactions, keyboard/reduced-motion, console, asset and Pages base paths. Publish only after these checks; verify the hosted URL after deploy.
+
+## Premium refinement — 2026-10-28
+
+User requests a more minimal, modern premium construction site, informed by 21st.dev. This supersedes the first mock's exact typography/composition while preserving content, brand, assets and interactions. Art direction is delegated in the request to improve the existing site; implementation remains React/CSS without new packages.
+
+Observed baseline: heavy 750-weight headings, repeated construction photograph in adjacent sections, uniformly split sections and a full-screen text-over-photo hero. Smallest coherent refinement owns `site/src/App.jsx` presentation and `site/src/site.css`; no changes to mail composition, document URLs, hosting runtime or dependencies.
+
+References actually inspected today:
+- https://21st.dev/community/components?q=architecture — public catalog search via WebMCP; thumbnails/results inspected. CLI blocked by missing login. No component source retrieved or installed.
+- https://21st.dev/@jahed/components/cinematic-landing-hero — rendered preview inspected: two-level headline hierarchy; oversized cinematic effects rejected as too theatrical for this company.
+- https://21st.dev/@hardikkashiyani123456788/components/experience-hero — rendered preview inspected: small eyebrow, large typography and compact circular arrow CTA. WebGL/outlined display type rejected.
+- https://21st.dev/@lyanchouss/components/hero-minimalism — preview blocked by sign-in after free-preview limit; not a viewed design reference.
+- https://davidchipperfield.com/ — rendered home inspected: spare navigation, generous white surround, architectural photography presented without decorative cards.
+- https://kokonutui.com/ — rendered home inspected: precise thin-rule alignment and clear hierarchy. Saturated widgets and decorative effects not adopted.
+- Refero was previously blocked by subscription; no new live Refero claim.
+
+Chosen direction: architectural editorial. A white navigation/intro frame, large 500-weight Manrope headline, inset panoramic image, generous section rhythm, small section indices, quiet warm-white surfaces and an asymmetrical project pair. Keep yellow as a sparse identity/action accent. Considered alternatives: refining the original photo-overlay hero would change too little; a dark cinematic direction would add visual weight. Neither is selected.
+
+Token updates: ink #20241f, secondary #6e736b, warm surface #f5f5f1, border #d9dcd4; existing yellow retained. Desktop headline 88–104px, secondary titles 52–64px, body 16–18px; main weight 500–550. Photo corner radius 12px, buttons pill/circle, no card shadows. Existing once-only reveals and reduced-motion rules retained; no new animation library.
+
+Acceptance: visually inspect 1440/768/390/320px, no overflow, menus and dialog focus/close behavior intact, service-to-contact and mail-draft flow intact, all images load. Production Pages build and existing tests must pass before updating the already-authorized repository and Pages publication.
