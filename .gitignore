@@ -1,0 +1,9 @@
+site/node_modules/
+site/dist/
+site/.vite/
+assets/
+research/
+.superpowers/
+qa/
+*.log
+.DS_Store
