@@ -26,3 +26,5 @@ Company contacts and document links are taken from the existing company site. Do
 ## Publication
 
 The GitHub Actions workflow builds at `/psc-monolit/`, tests, and deploys only `site/dist/client` to Pages. Publication status is verified separately against the hosted site and Actions run; local QA alone is not deployment proof.
+
+Hosted verification: https://spayzik.github.io/psc-monolit/ at 1280px viewport (1265px content). All 24 rendered images loaded, no horizontal overflow, contact modal opened/closed, contacts navigation and return-to-top worked, and captured console warning/error list was empty. Source 5be24f084e392fa48f61caf62b458c2a2450c4de; successful workflow: https://github.com/spayzik/psc-monolit/actions/runs/40669662122 . Hosted screenshot saved locally as qa/hosted-hero.jpg.
